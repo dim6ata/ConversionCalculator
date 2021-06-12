@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LengthViewController" customModule="ConversionCalculator" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="textFieldsCollection" destination="Dby-Xi-2LF" collectionClass="NSMutableArray" id="EhP-Fe-mKa"/>
+                <outletCollection property="textFieldsCollection" destination="RXR-gI-fsY" collectionClass="NSMutableArray" id="QxJ-Vl-h0z"/>
+                <outletCollection property="textFieldsCollection" destination="jyt-np-yep" collectionClass="NSMutableArray" id="ORb-N7-ese"/>
+                <outletCollection property="textFieldsCollection" destination="K5X-3A-Fwn" collectionClass="NSMutableArray" id="awN-MI-uSN"/>
+                <outletCollection property="textFieldsCollection" destination="dzv-yr-Fyq" collectionClass="NSMutableArray" id="djD-wm-bwK"/>
+                <outletCollection property="textFieldsCollection" destination="aDK-wq-Ygo" collectionClass="NSMutableArray" id="kFW-Ll-jT1"/>
+                <outletCollection property="textFieldsCollection" destination="EHf-BA-jfs" collectionClass="NSMutableArray" id="dkm-e1-sa0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-Y7-WES">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LENGTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YL9-B5-RcK">
+                            <rect key="frame" x="0.0" y="10" width="414" height="33.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Tc5-eX-Fxy">
+                            <rect key="frame" x="0.0" y="53.5" width="414" height="269"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y18-bX-tku" userLabel="MetreView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="36.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Metre Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dby-Xi-2LF" userLabel="metreTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="72.5" y="1" width="314.5" height="34.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="lengthTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="3ja-02-5nF"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="rIR-zP-Gbb"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="m" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCh-jO-Gyq">
+                                            <rect key="frame" x="35" y="8" width="37.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="DCh-jO-Gyq" firstAttribute="width" secondItem="y18-bX-tku" secondAttribute="width" multiplier="0.09" id="Q56-nG-u7L"/>
+                                        <constraint firstItem="Dby-Xi-2LF" firstAttribute="top" secondItem="y18-bX-tku" secondAttribute="top" constant="1" id="QRA-pQ-sWh"/>
+                                        <constraint firstItem="Dby-Xi-2LF" firstAttribute="centerY" secondItem="DCh-jO-Gyq" secondAttribute="centerY" id="Qfd-Nt-ySb"/>
+                                        <constraint firstItem="DCh-jO-Gyq" firstAttribute="leading" secondItem="y18-bX-tku" secondAttribute="leading" constant="35" id="YR3-Vj-kQN"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dby-Xi-2LF" secondAttribute="bottom" constant="1" id="bSZ-I4-9Vk"/>
+                                        <constraint firstItem="Dby-Xi-2LF" firstAttribute="leading" secondItem="DCh-jO-Gyq" secondAttribute="trailing" id="dkA-Ry-uC6"/>
+                                        <constraint firstItem="Dby-Xi-2LF" firstAttribute="width" secondItem="y18-bX-tku" secondAttribute="width" multiplier="0.76" id="jMs-TF-6ef"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zp-nW-PU3" userLabel="KMView">
+                                    <rect key="frame" x="0.0" y="38.5" width="414" height="37"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Kilometre Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RXR-gI-fsY" userLabel="KmTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="72.5" y="1" width="314.5" height="35"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="lengthTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="UHq-IN-aDq"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="amZ-W7-lrU"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jv-Is-QdA">
+                                            <rect key="frame" x="35" y="8.5" width="37.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="RXR-gI-fsY" firstAttribute="centerY" secondItem="2Jv-Is-QdA" secondAttribute="centerY" id="14z-By-eir"/>
+                                        <constraint firstItem="2Jv-Is-QdA" firstAttribute="width" secondItem="2zp-nW-PU3" secondAttribute="width" multiplier="0.09" id="Gsn-zi-Ire"/>
+                                        <constraint firstAttribute="bottom" secondItem="RXR-gI-fsY" secondAttribute="bottom" constant="1" id="LW8-yC-Juu"/>
+                                        <constraint firstItem="RXR-gI-fsY" firstAttribute="width" secondItem="2zp-nW-PU3" secondAttribute="width" multiplier="0.76" id="Uc9-Sz-7fV"/>
+                                        <constraint firstItem="RXR-gI-fsY" firstAttribute="top" secondItem="2zp-nW-PU3" secondAttribute="top" constant="1" id="WY7-uX-TGs"/>
+                                        <constraint firstItem="RXR-gI-fsY" firstAttribute="leading" secondItem="2Jv-Is-QdA" secondAttribute="trailing" id="aMW-gS-6L2"/>
+                                        <constraint firstItem="2Jv-Is-QdA" firstAttribute="leading" secondItem="2zp-nW-PU3" secondAttribute="leading" constant="35" id="pVZ-3C-Yhr"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iu6-uR-IwS" userLabel="MileView">
+                                    <rect key="frame" x="0.0" y="77.5" width="414" height="36.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mile Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jyt-np-yep" userLabel="MileTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="72.5" y="1" width="314.5" height="34.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="lengthTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="xZp-Va-9yL"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="fmQ-UN-u9W"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="mile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKU-gS-Yns">
+                                            <rect key="frame" x="35" y="8" width="37.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jyt-np-yep" secondAttribute="bottom" constant="1" id="2w3-xp-wqM"/>
+                                        <constraint firstItem="jyt-np-yep" firstAttribute="width" secondItem="Iu6-uR-IwS" secondAttribute="width" multiplier="0.76" id="3Hb-Ga-CQE"/>
+                                        <constraint firstItem="jyt-np-yep" firstAttribute="leading" secondItem="cKU-gS-Yns" secondAttribute="trailing" id="8wc-F7-NHC"/>
+                                        <constraint firstItem="jyt-np-yep" firstAttribute="centerY" secondItem="cKU-gS-Yns" secondAttribute="centerY" id="Afj-l8-NHT"/>
+                                        <constraint firstItem="jyt-np-yep" firstAttribute="top" secondItem="Iu6-uR-IwS" secondAttribute="top" constant="1" id="ckf-lG-CIr"/>
+                                        <constraint firstItem="cKU-gS-Yns" firstAttribute="leading" secondItem="Iu6-uR-IwS" secondAttribute="leading" constant="35" id="dVS-eG-mkh"/>
+                                        <constraint firstItem="cKU-gS-Yns" firstAttribute="width" secondItem="Iu6-uR-IwS" secondAttribute="width" multiplier="0.09" id="mMu-RW-cux"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TD4-jW-3zF" userLabel="CMView">
+                                    <rect key="frame" x="0.0" y="116" width="414" height="36.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Centimetre Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="K5X-3A-Fwn" userLabel="cmTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="72.5" y="1" width="314.5" height="34.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="lengthTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="IZH-kH-9nt"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="8F7-ZM-nyO"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="cm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqw-dH-Jtx">
+                                            <rect key="frame" x="35" y="8" width="37.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="K5X-3A-Fwn" secondAttribute="bottom" constant="1" id="7qC-Ud-dVv"/>
+                                        <constraint firstItem="K5X-3A-Fwn" firstAttribute="leading" secondItem="rqw-dH-Jtx" secondAttribute="trailing" id="B92-kb-74U"/>
+                                        <constraint firstItem="K5X-3A-Fwn" firstAttribute="centerY" secondItem="rqw-dH-Jtx" secondAttribute="centerY" id="Phy-zC-jxG"/>
+                                        <constraint firstItem="rqw-dH-Jtx" firstAttribute="leading" secondItem="TD4-jW-3zF" secondAttribute="leading" constant="35" id="Ycx-yd-yIm"/>
+                                        <constraint firstItem="rqw-dH-Jtx" firstAttribute="width" secondItem="TD4-jW-3zF" secondAttribute="width" multiplier="0.09" id="gi0-HB-88B"/>
+                                        <constraint firstItem="K5X-3A-Fwn" firstAttribute="top" secondItem="TD4-jW-3zF" secondAttribute="top" constant="1" id="lUU-5h-2CO"/>
+                                        <constraint firstItem="K5X-3A-Fwn" firstAttribute="width" secondItem="TD4-jW-3zF" secondAttribute="width" multiplier="0.76" id="y9j-JE-7S2"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mar-OM-8xx" userLabel="MMView">
+                                    <rect key="frame" x="0.0" y="154.5" width="414" height="37"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Millimetre Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dzv-yr-Fyq" userLabel="mmTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="72.5" y="1" width="314.5" height="35"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="lengthTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="8Wm-i8-f0O"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="lmd-xB-w4b"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="mm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0k-L1-V5x">
+                                            <rect key="frame" x="35" y="8.5" width="37.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="o0k-L1-V5x" firstAttribute="width" secondItem="Mar-OM-8xx" secondAttribute="width" multiplier="0.09" id="45g-CF-uqA"/>
+                                        <constraint firstItem="dzv-yr-Fyq" firstAttribute="width" secondItem="Mar-OM-8xx" secondAttribute="width" multiplier="0.76" id="9XV-5Z-iHX"/>
+                                        <constraint firstItem="dzv-yr-Fyq" firstAttribute="leading" secondItem="o0k-L1-V5x" secondAttribute="trailing" id="Ej8-jK-ciF"/>
+                                        <constraint firstAttribute="bottom" secondItem="dzv-yr-Fyq" secondAttribute="bottom" constant="1" id="Hh7-ZV-H0B"/>
+                                        <constraint firstItem="dzv-yr-Fyq" firstAttribute="centerY" secondItem="o0k-L1-V5x" secondAttribute="centerY" id="J2V-Ic-utr"/>
+                                        <constraint firstItem="o0k-L1-V5x" firstAttribute="leading" secondItem="Mar-OM-8xx" secondAttribute="leading" constant="35" id="Thb-ET-wba"/>
+                                        <constraint firstItem="dzv-yr-Fyq" firstAttribute="top" secondItem="Mar-OM-8xx" secondAttribute="top" constant="1" id="mgx-Ly-yU5"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-lS-AFD" userLabel="YardView">
+                                    <rect key="frame" x="0.0" y="193.5" width="414" height="36.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Yard Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aDK-wq-Ygo" userLabel="yardTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="72.5" y="1" width="314.5" height="34.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="lengthTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="z9h-nt-S8s"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="LFP-vo-oG8"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="yard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbd-OX-lzR">
+                                            <rect key="frame" x="35" y="8" width="37.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="aDK-wq-Ygo" firstAttribute="centerY" secondItem="nbd-OX-lzR" secondAttribute="centerY" id="AWa-ey-Lzl"/>
+                                        <constraint firstItem="aDK-wq-Ygo" firstAttribute="leading" secondItem="nbd-OX-lzR" secondAttribute="trailing" id="UM4-Ie-TXp"/>
+                                        <constraint firstItem="aDK-wq-Ygo" firstAttribute="top" secondItem="DUj-lS-AFD" secondAttribute="top" constant="1" id="Ux8-49-6Mp"/>
+                                        <constraint firstItem="aDK-wq-Ygo" firstAttribute="width" secondItem="DUj-lS-AFD" secondAttribute="width" multiplier="0.76" id="YYS-sI-Jcm"/>
+                                        <constraint firstAttribute="bottom" secondItem="aDK-wq-Ygo" secondAttribute="bottom" constant="1" id="aOg-SL-990"/>
+                                        <constraint firstItem="nbd-OX-lzR" firstAttribute="width" secondItem="DUj-lS-AFD" secondAttribute="width" multiplier="0.09" id="iC5-aO-hna"/>
+                                        <constraint firstItem="nbd-OX-lzR" firstAttribute="leading" secondItem="DUj-lS-AFD" secondAttribute="leading" constant="35" id="uiv-kv-pXR"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-ER-Pbb" userLabel="InchView">
+                                    <rect key="frame" x="0.0" y="232" width="414" height="37"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Inch Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EHf-BA-jfs" userLabel="inchTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="72.5" y="1" width="314.5" height="35"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="lengthTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="3cs-vP-icr"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="x6c-op-yTT"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="inch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZG-0a-Jqj">
+                                            <rect key="frame" x="35" y="8" width="37.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="NZG-0a-Jqj" firstAttribute="width" secondItem="NmJ-ER-Pbb" secondAttribute="width" multiplier="0.09" id="4hc-5v-b8i"/>
+                                        <constraint firstItem="EHf-BA-jfs" firstAttribute="width" secondItem="NmJ-ER-Pbb" secondAttribute="width" multiplier="0.76" id="6hi-p0-gMy"/>
+                                        <constraint firstAttribute="bottom" secondItem="EHf-BA-jfs" secondAttribute="bottom" constant="1" id="b3F-NV-7bm"/>
+                                        <constraint firstItem="EHf-BA-jfs" firstAttribute="leading" secondItem="NZG-0a-Jqj" secondAttribute="trailing" id="gkJ-MI-qgn"/>
+                                        <constraint firstItem="EHf-BA-jfs" firstAttribute="centerY" secondItem="NZG-0a-Jqj" secondAttribute="centerY" id="rOn-TZ-SOr"/>
+                                        <constraint firstItem="EHf-BA-jfs" firstAttribute="top" secondItem="NmJ-ER-Pbb" secondAttribute="top" constant="1" id="tQ3-e9-6mB"/>
+                                        <constraint firstItem="NZG-0a-Jqj" firstAttribute="leading" secondItem="NmJ-ER-Pbb" secondAttribute="leading" constant="35" id="zXD-v0-53n"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="y18-bX-tku" firstAttribute="width" secondItem="Tc5-eX-Fxy" secondAttribute="width" id="5f8-3F-Lhx"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="QmN-6D-0V2"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="YL9-B5-RcK" firstAttribute="centerX" secondItem="GHl-Y7-WES" secondAttribute="centerX" id="Fzc-bn-GBH"/>
+                        <constraint firstItem="Tc5-eX-Fxy" firstAttribute="height" secondItem="GHl-Y7-WES" secondAttribute="height" multiplier="0.3" id="HKS-Sf-Eu4"/>
+                        <constraint firstItem="YL9-B5-RcK" firstAttribute="top" secondItem="GHl-Y7-WES" secondAttribute="top" constant="10" id="SqF-ab-Gpg"/>
+                        <constraint firstItem="Tc5-eX-Fxy" firstAttribute="top" secondItem="YL9-B5-RcK" secondAttribute="bottom" constant="10" id="TRL-fr-kLp"/>
+                        <constraint firstItem="Tc5-eX-Fxy" firstAttribute="leading" secondItem="GHl-Y7-WES" secondAttribute="leading" id="jT1-aH-Ont"/>
+                        <constraint firstItem="YL9-B5-RcK" firstAttribute="width" secondItem="GHl-Y7-WES" secondAttribute="width" id="mst-FV-FoE"/>
+                        <constraint firstAttribute="trailing" secondItem="Tc5-eX-Fxy" secondAttribute="trailing" id="zyT-9t-H5W"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="GHl-Y7-WES" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="0L2-TH-N5s"/>
+                <constraint firstItem="GHl-Y7-WES" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Vr9-eL-5vQ"/>
+                <constraint firstItem="GHl-Y7-WES" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="fNQ-2H-XVa"/>
+                <constraint firstItem="GHl-Y7-WES" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gEN-4G-54B"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="141" y="64"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Dby-Xi-2LF">
+            <size key="intrinsicContentSize" width="163.5" height="34"/>
+        </designable>
+        <designable name="EHf-BA-jfs">
+            <size key="intrinsicContentSize" width="151" height="34"/>
+        </designable>
+        <designable name="K5X-3A-Fwn">
+            <size key="intrinsicContentSize" width="203.5" height="34"/>
+        </designable>
+        <designable name="RXR-gI-fsY">
+            <size key="intrinsicContentSize" width="191.5" height="34"/>
+        </designable>
+        <designable name="aDK-wq-Ygo">
+            <size key="intrinsicContentSize" width="153" height="34"/>
+        </designable>
+        <designable name="dzv-yr-Fyq">
+            <size key="intrinsicContentSize" width="193" height="34"/>
+        </designable>
+        <designable name="jyt-np-yep">
+            <size key="intrinsicContentSize" width="150" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

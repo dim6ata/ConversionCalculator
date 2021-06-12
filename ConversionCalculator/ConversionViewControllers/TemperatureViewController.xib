@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemperatureViewController" customModule="ConversionCalculator" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="textFieldsCollection" destination="qFX-gt-ZHs" collectionClass="NSMutableArray" id="226-yY-FF0"/>
+                <outletCollection property="textFieldsCollection" destination="8ff-CQ-RUU" collectionClass="NSMutableArray" id="7e5-hZ-rTZ"/>
+                <outletCollection property="textFieldsCollection" destination="CpC-J4-hq9" collectionClass="NSMutableArray" id="e6b-P7-hZp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPERATURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4e-8g-woC">
+                    <rect key="frame" x="0.0" y="10" width="414" height="33.5"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B8x-TJ-0Ln">
+                    <rect key="frame" x="0.0" y="53.5" width="414" height="269"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHJ-RU-VKp" userLabel="CelsiusView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Celsius Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CpC-J4-hq9" userLabel="celsiusTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="73" y="5" width="310.5" height="79.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" systemColor="systemIndigoColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="temperatureTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="3Kc-VD-bas"/>
+                                        <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="Tlp-bZ-Kyk"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpX-Z2-pia">
+                                    <rect key="frame" x="35" y="34.5" width="33" height="20.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="fpX-Z2-pia" firstAttribute="width" secondItem="YHJ-RU-VKp" secondAttribute="width" multiplier="0.08" id="6mY-8w-gnb"/>
+                                <constraint firstItem="CpC-J4-hq9" firstAttribute="centerY" secondItem="fpX-Z2-pia" secondAttribute="centerY" id="91T-Kd-wDm"/>
+                                <constraint firstAttribute="bottom" secondItem="CpC-J4-hq9" secondAttribute="bottom" constant="5" id="CHr-dB-ySz"/>
+                                <constraint firstItem="CpC-J4-hq9" firstAttribute="leading" secondItem="fpX-Z2-pia" secondAttribute="trailing" constant="5" id="FO4-Hw-NDd"/>
+                                <constraint firstItem="CpC-J4-hq9" firstAttribute="width" secondItem="YHJ-RU-VKp" secondAttribute="width" multiplier="0.75" id="Kl2-go-nMe"/>
+                                <constraint firstItem="CpC-J4-hq9" firstAttribute="top" secondItem="YHJ-RU-VKp" secondAttribute="top" constant="5" id="cEb-TG-URe"/>
+                                <constraint firstItem="fpX-Z2-pia" firstAttribute="leading" secondItem="YHJ-RU-VKp" secondAttribute="leading" constant="35" id="cZy-NQ-sLz"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SV-wQ-sbl" userLabel="FahrenheitView">
+                            <rect key="frame" x="0.0" y="89.5" width="414" height="89.5"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Fahrenheit Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qFX-gt-ZHs" userLabel="farhrTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="73" y="5" width="310.5" height="79.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" systemColor="systemIndigoColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="temperatureTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="csl-eg-aDn"/>
+                                        <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="boQ-yf-54F"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="°F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXy-ly-z3U">
+                                    <rect key="frame" x="35" y="34.5" width="33" height="20.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="qFX-gt-ZHs" firstAttribute="leading" secondItem="FXy-ly-z3U" secondAttribute="trailing" constant="5" id="Ksx-Va-gCb"/>
+                                <constraint firstItem="qFX-gt-ZHs" firstAttribute="top" secondItem="3SV-wQ-sbl" secondAttribute="top" constant="5" id="aVw-K1-TtZ"/>
+                                <constraint firstItem="FXy-ly-z3U" firstAttribute="leading" secondItem="3SV-wQ-sbl" secondAttribute="leading" constant="35" id="efc-WE-w6R"/>
+                                <constraint firstItem="qFX-gt-ZHs" firstAttribute="centerY" secondItem="FXy-ly-z3U" secondAttribute="centerY" id="hlk-dc-mhl"/>
+                                <constraint firstAttribute="bottom" secondItem="qFX-gt-ZHs" secondAttribute="bottom" constant="5" id="m4G-52-NvR"/>
+                                <constraint firstItem="qFX-gt-ZHs" firstAttribute="width" secondItem="3SV-wQ-sbl" secondAttribute="width" multiplier="0.75" id="meL-FN-QGD"/>
+                                <constraint firstItem="FXy-ly-z3U" firstAttribute="width" secondItem="3SV-wQ-sbl" secondAttribute="width" multiplier="0.08" id="xSo-Tr-TCm"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hU-p6-DKg" userLabel="KelvinView">
+                            <rect key="frame" x="0.0" y="179" width="414" height="90"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Kelvin Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8ff-CQ-RUU" userLabel="kelvTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="73" y="5" width="310.5" height="80"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" systemColor="systemIndigoColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="temperatureTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="4ng-Lj-dxy"/>
+                                        <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="fQv-9s-aZQ"/>
+                                    </connections>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXc-cb-kzL">
+                                    <rect key="frame" x="35" y="35" width="33" height="20.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="tXc-cb-kzL" firstAttribute="width" secondItem="2hU-p6-DKg" secondAttribute="width" multiplier="0.08" id="BsU-1n-e2k"/>
+                                <constraint firstItem="8ff-CQ-RUU" firstAttribute="centerY" secondItem="tXc-cb-kzL" secondAttribute="centerY" id="EyX-Kn-Jrb"/>
+                                <constraint firstAttribute="bottom" secondItem="8ff-CQ-RUU" secondAttribute="bottom" constant="5" id="MMP-k0-0Qa"/>
+                                <constraint firstItem="8ff-CQ-RUU" firstAttribute="top" secondItem="2hU-p6-DKg" secondAttribute="top" constant="5" id="Q89-b0-KYg"/>
+                                <constraint firstItem="8ff-CQ-RUU" firstAttribute="width" secondItem="2hU-p6-DKg" secondAttribute="width" multiplier="0.75" id="WPc-u7-wCr"/>
+                                <constraint firstItem="8ff-CQ-RUU" firstAttribute="leading" secondItem="tXc-cb-kzL" secondAttribute="trailing" constant="5" id="ZC0-jc-ccM"/>
+                                <constraint firstItem="tXc-cb-kzL" firstAttribute="leading" secondItem="2hU-p6-DKg" secondAttribute="leading" constant="35" id="nHB-I1-rHH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="YHJ-RU-VKp" firstAttribute="width" secondItem="B8x-TJ-0Ln" secondAttribute="width" id="Fgw-xx-eil"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y4e-8g-woC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="32d-Ew-wKV"/>
+                <constraint firstItem="Y4e-8g-woC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="6Nv-1f-Rx9"/>
+                <constraint firstAttribute="trailing" secondItem="B8x-TJ-0Ln" secondAttribute="trailing" id="CzK-2c-nks"/>
+                <constraint firstItem="B8x-TJ-0Ln" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="M5h-jc-Jgd"/>
+                <constraint firstItem="B8x-TJ-0Ln" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="UTb-3a-bdv"/>
+                <constraint firstItem="Y4e-8g-woC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="eaX-Ei-Hgb"/>
+                <constraint firstItem="B8x-TJ-0Ln" firstAttribute="top" secondItem="Y4e-8g-woC" secondAttribute="bottom" constant="10" id="sM3-1G-grv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="100.00000000000001" y="63.616071428571423"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="8ff-CQ-RUU">
+            <size key="intrinsicContentSize" width="164" height="34"/>
+        </designable>
+        <designable name="CpC-J4-hq9">
+            <size key="intrinsicContentSize" width="174" height="34"/>
+        </designable>
+        <designable name="qFX-gt-ZHs">
+            <size key="intrinsicContentSize" width="199" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

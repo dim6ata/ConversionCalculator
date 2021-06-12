@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpeedViewController" customModule="ConversionCalculator" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="textFieldsCollection" destination="snG-o0-tDm" collectionClass="NSMutableArray" id="CKr-Yx-bLz"/>
+                <outletCollection property="textFieldsCollection" destination="bUN-Nn-c4E" collectionClass="NSMutableArray" id="e6e-RE-Tft"/>
+                <outletCollection property="textFieldsCollection" destination="LG3-SK-A5V" collectionClass="NSMutableArray" id="28Z-aA-xiz"/>
+                <outletCollection property="textFieldsCollection" destination="XBf-yg-GLb" collectionClass="NSMutableArray" id="sGZ-rf-vCU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K4o-7e-GaC">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c6-bp-ckC">
+                            <rect key="frame" x="0.0" y="10" width="414" height="33.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WQw-9f-hTC">
+                            <rect key="frame" x="0.0" y="53.5" width="414" height="269"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hL5-MH-Uax" userLabel="KMPHView">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Kilometre Per Hour Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="snG-o0-tDm" userLabel="kmhTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="76.5" y="1" width="310.5" height="63.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="speedTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="JNW-g7-BRs"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="VBT-BB-jog"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="km/h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-uS-qDX">
+                                            <rect key="frame" x="35" y="22.5" width="41.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="snG-o0-tDm" firstAttribute="top" secondItem="hL5-MH-Uax" secondAttribute="top" constant="1" id="2Tg-TP-nVl"/>
+                                        <constraint firstItem="zDl-uS-qDX" firstAttribute="width" secondItem="hL5-MH-Uax" secondAttribute="width" multiplier="0.1" id="5UX-wg-etn"/>
+                                        <constraint firstItem="zDl-uS-qDX" firstAttribute="leading" secondItem="hL5-MH-Uax" secondAttribute="leading" constant="35" id="fDU-rS-jdQ"/>
+                                        <constraint firstItem="snG-o0-tDm" firstAttribute="width" secondItem="hL5-MH-Uax" secondAttribute="width" multiplier="0.75" id="kSG-ve-GbT"/>
+                                        <constraint firstAttribute="bottom" secondItem="snG-o0-tDm" secondAttribute="bottom" constant="1" id="kWF-iX-Okc"/>
+                                        <constraint firstItem="snG-o0-tDm" firstAttribute="leading" secondItem="zDl-uS-qDX" secondAttribute="trailing" id="koM-pH-hKB"/>
+                                        <constraint firstItem="snG-o0-tDm" firstAttribute="centerY" secondItem="zDl-uS-qDX" secondAttribute="centerY" id="v9o-Qd-icI"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgn-p7-E4W" userLabel="MSView">
+                                    <rect key="frame" x="0.0" y="67.5" width="414" height="66"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Metre Per Second Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bUN-Nn-c4E" userLabel="msTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="76.5" y="1" width="310.5" height="64"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="speedTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="4H6-Fz-r9x"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="9zJ-mM-r3o"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="m/s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKF-Jj-pht">
+                                            <rect key="frame" x="35" y="23" width="41.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="bUN-Nn-c4E" firstAttribute="width" secondItem="Cgn-p7-E4W" secondAttribute="width" multiplier="0.75" id="1mY-g3-Rx3"/>
+                                        <constraint firstItem="bUN-Nn-c4E" firstAttribute="centerY" secondItem="bKF-Jj-pht" secondAttribute="centerY" id="3fx-H0-Ozc"/>
+                                        <constraint firstItem="bUN-Nn-c4E" firstAttribute="top" secondItem="Cgn-p7-E4W" secondAttribute="top" constant="1" id="C9Z-hI-hZi"/>
+                                        <constraint firstItem="bUN-Nn-c4E" firstAttribute="leading" secondItem="bKF-Jj-pht" secondAttribute="trailing" id="J3o-FC-exH"/>
+                                        <constraint firstAttribute="bottom" secondItem="bUN-Nn-c4E" secondAttribute="bottom" constant="1" id="PEb-Gc-NBR"/>
+                                        <constraint firstItem="bKF-Jj-pht" firstAttribute="leading" secondItem="Cgn-p7-E4W" secondAttribute="leading" constant="35" id="fli-hd-L9d"/>
+                                        <constraint firstItem="bKF-Jj-pht" firstAttribute="width" secondItem="Cgn-p7-E4W" secondAttribute="width" multiplier="0.1" id="kiT-gA-7Aj"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ync-iI-ahS" userLabel="MPHView">
+                                    <rect key="frame" x="0.0" y="135.5" width="414" height="65.5"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Miles Per Hour Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LG3-SK-A5V" userLabel="mphTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="76.5" y="1" width="310.5" height="63.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="speedTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="VjI-5l-RUy"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="LoU-bJ-JO9"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="mph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d96-L3-Z8S">
+                                            <rect key="frame" x="35" y="22.5" width="41.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="LG3-SK-A5V" firstAttribute="top" secondItem="ync-iI-ahS" secondAttribute="top" constant="1" id="5HI-1O-vxy"/>
+                                        <constraint firstItem="LG3-SK-A5V" firstAttribute="width" secondItem="ync-iI-ahS" secondAttribute="width" multiplier="0.75" id="7di-c2-jNE"/>
+                                        <constraint firstItem="d96-L3-Z8S" firstAttribute="leading" secondItem="ync-iI-ahS" secondAttribute="leading" constant="35" id="9Gg-Zp-OA6"/>
+                                        <constraint firstAttribute="bottom" secondItem="LG3-SK-A5V" secondAttribute="bottom" constant="1" id="Ihm-jh-eKF"/>
+                                        <constraint firstItem="d96-L3-Z8S" firstAttribute="width" secondItem="ync-iI-ahS" secondAttribute="width" multiplier="0.1" id="Jk6-pe-vH7"/>
+                                        <constraint firstItem="LG3-SK-A5V" firstAttribute="leading" secondItem="d96-L3-Z8S" secondAttribute="trailing" id="w0I-Ga-boy"/>
+                                        <constraint firstItem="LG3-SK-A5V" firstAttribute="centerY" secondItem="d96-L3-Z8S" secondAttribute="centerY" id="xmb-L6-CyM"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdl-UE-zq8" userLabel="KnotView">
+                                    <rect key="frame" x="0.0" y="203" width="414" height="66"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Knots Value" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XBf-yg-GLb" userLabel="knotTF" customClass="CustomTextField" customModule="ConversionCalculator" customModuleProvider="target">
+                                            <rect key="frame" x="76.5" y="1" width="310.5" height="64"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" systemColor="systemIndigoColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                    <real key="value" value="6"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="speedTextFieldSelected:" destination="-1" eventType="editingDidBegin" id="gZI-7w-pi2"/>
+                                                <action selector="textFieldsEditingChanged:" destination="-1" eventType="editingChanged" id="2R8-5o-Pk3"/>
+                                            </connections>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="knot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eop-MI-1te">
+                                            <rect key="frame" x="35" y="22.5" width="41.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="XBf-yg-GLb" secondAttribute="bottom" constant="1" id="3iE-NX-bBv"/>
+                                        <constraint firstItem="XBf-yg-GLb" firstAttribute="top" secondItem="rdl-UE-zq8" secondAttribute="top" constant="1" id="9qp-MO-usJ"/>
+                                        <constraint firstItem="eop-MI-1te" firstAttribute="width" secondItem="rdl-UE-zq8" secondAttribute="width" multiplier="0.1" id="AOS-D0-ZDH"/>
+                                        <constraint firstItem="eop-MI-1te" firstAttribute="leading" secondItem="rdl-UE-zq8" secondAttribute="leading" constant="35" id="B8u-bQ-Ofr"/>
+                                        <constraint firstItem="XBf-yg-GLb" firstAttribute="leading" secondItem="eop-MI-1te" secondAttribute="trailing" id="Vlf-k8-Lgl"/>
+                                        <constraint firstItem="XBf-yg-GLb" firstAttribute="centerY" secondItem="eop-MI-1te" secondAttribute="centerY" id="d8A-ia-rct"/>
+                                        <constraint firstItem="XBf-yg-GLb" firstAttribute="width" secondItem="rdl-UE-zq8" secondAttribute="width" multiplier="0.75" id="eCy-k6-UmI"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="hL5-MH-Uax" firstAttribute="width" secondItem="WQw-9f-hTC" secondAttribute="width" id="byM-Rd-bX4"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="EuK-M4-QTU"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5c6-bp-ckC" firstAttribute="centerX" secondItem="K4o-7e-GaC" secondAttribute="centerX" id="5Xv-Ok-lkf"/>
+                        <constraint firstItem="WQw-9f-hTC" firstAttribute="height" secondItem="K4o-7e-GaC" secondAttribute="height" multiplier="0.3" id="Kyc-tL-Abv"/>
+                        <constraint firstItem="WQw-9f-hTC" firstAttribute="leading" secondItem="K4o-7e-GaC" secondAttribute="leading" id="L5E-71-OPw"/>
+                        <constraint firstItem="5c6-bp-ckC" firstAttribute="top" secondItem="K4o-7e-GaC" secondAttribute="top" constant="10" id="dlV-BB-ZOx"/>
+                        <constraint firstItem="5c6-bp-ckC" firstAttribute="width" secondItem="K4o-7e-GaC" secondAttribute="width" id="hkj-kf-dOo"/>
+                        <constraint firstItem="WQw-9f-hTC" firstAttribute="top" secondItem="5c6-bp-ckC" secondAttribute="bottom" constant="10" id="nSt-r3-L3P"/>
+                        <constraint firstAttribute="trailing" secondItem="WQw-9f-hTC" secondAttribute="trailing" id="vKe-Ze-lwu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="K4o-7e-GaC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HpV-Sm-ENh"/>
+                <constraint firstItem="K4o-7e-GaC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MwG-NZ-71T"/>
+                <constraint firstItem="K4o-7e-GaC" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="PBh-Zm-xMI"/>
+                <constraint firstItem="K4o-7e-GaC" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="pIm-XI-FkP"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="64"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="LG3-SK-A5V">
+            <size key="intrinsicContentSize" width="230" height="34"/>
+        </designable>
+        <designable name="XBf-yg-GLb">
+            <size key="intrinsicContentSize" width="163" height="34"/>
+        </designable>
+        <designable name="bUN-Nn-c4E">
+            <size key="intrinsicContentSize" width="255.5" height="34"/>
+        </designable>
+        <designable name="snG-o0-tDm">
+            <size key="intrinsicContentSize" width="263" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

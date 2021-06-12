@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HistoryTemplateViewController" customModule="ConversionCalculator" customModuleProvider="target">
+            <connections>
+                <outlet property="pageTitle" destination="Tw6-Zq-ISz" id="Xen-8l-K4S"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="viewCollection" destination="RyW-sD-II1" collectionClass="NSMutableArray" id="4ma-QS-yUU"/>
+                <outletCollection property="viewCollection" destination="enH-d8-9o9" collectionClass="NSMutableArray" id="Qx1-Cv-tqi"/>
+                <outletCollection property="viewCollection" destination="rr9-9Q-94H" collectionClass="NSMutableArray" id="wO3-Oe-c3T"/>
+                <outletCollection property="viewCollection" destination="uRp-Ra-0BS" collectionClass="NSMutableArray" id="Wy8-7l-hYX"/>
+                <outletCollection property="viewCollection" destination="0Ec-1C-gqU" collectionClass="NSMutableArray" id="p6l-z6-KrW"/>
+                <outletCollection property="containerList" destination="q2e-1U-0gp" collectionClass="NSMutableArray" id="qbk-gL-Qge"/>
+                <outletCollection property="containerList" destination="HIf-20-16Y" collectionClass="NSMutableArray" id="V1D-v4-H6z"/>
+                <outletCollection property="containerList" destination="rff-Ix-wmQ" collectionClass="NSMutableArray" id="c3k-mb-Ihu"/>
+                <outletCollection property="containerList" destination="qfj-Km-mkc" collectionClass="NSMutableArray" id="AaP-5g-XoR"/>
+                <outletCollection property="containerList" destination="oUq-6x-yAv" collectionClass="NSMutableArray" id="mh4-sl-9bq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxS-hz-y91">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="696"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2cR-cb-pPJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tw6-Zq-ISz">
+                                    <rect key="frame" x="182" y="0.0" width="50" height="50"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q2e-1U-0gp" userLabel="CONV1" customClass="CustomStackView" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="20.5" y="0.0" width="373" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRN-iB-ade">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyW-sD-II1">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstItem="iRN-iB-ade" firstAttribute="width" secondItem="q2e-1U-0gp" secondAttribute="width" multiplier="0.95" id="Pmm-Ej-kAK"/>
+                                        <constraint firstItem="RyW-sD-II1" firstAttribute="width" secondItem="q2e-1U-0gp" secondAttribute="width" multiplier="0.95" id="q3v-Qp-EZe"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-20-16Y" userLabel="CONV2" customClass="CustomStackView" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="20.5" y="0.0" width="373" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDY-nP-qy1">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enH-d8-9o9">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstItem="enH-d8-9o9" firstAttribute="width" secondItem="HIf-20-16Y" secondAttribute="width" multiplier="0.95" id="NSr-1O-4AC"/>
+                                        <constraint firstItem="XDY-nP-qy1" firstAttribute="width" secondItem="HIf-20-16Y" secondAttribute="width" multiplier="0.95" id="bLe-Kh-Vs0"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rff-Ix-wmQ" userLabel="CONV3" customClass="CustomStackView" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="20.5" y="0.0" width="373" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip7-S7-H9f">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rr9-9Q-94H">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstItem="rr9-9Q-94H" firstAttribute="width" secondItem="rff-Ix-wmQ" secondAttribute="width" multiplier="0.95" id="5qq-eV-GFk"/>
+                                        <constraint firstItem="ip7-S7-H9f" firstAttribute="width" secondItem="rff-Ix-wmQ" secondAttribute="width" multiplier="0.95" id="wlt-y0-Y24"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qfj-Km-mkc" userLabel="CONV4" customClass="CustomStackView" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="20.5" y="0.0" width="373" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion 4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkj-5H-4SC">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-Ra-0BS">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstItem="uRp-Ra-0BS" firstAttribute="width" secondItem="qfj-Km-mkc" secondAttribute="width" multiplier="0.95" id="TGM-YY-8aV"/>
+                                        <constraint firstItem="hkj-5H-4SC" firstAttribute="width" secondItem="qfj-Km-mkc" secondAttribute="width" multiplier="0.95" id="hDs-ax-aWf"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oUq-6x-yAv" userLabel="CONV5" customClass="CustomStackView" customModule="ConversionCalculator" customModuleProvider="target">
+                                    <rect key="frame" x="20.5" y="0.0" width="373" height="16"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFL-VA-G91">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ec-1C-gqU">
+                                            <rect key="frame" x="9.5" y="8" width="354" height="0.0"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstItem="sFL-VA-G91" firstAttribute="width" secondItem="oUq-6x-yAv" secondAttribute="width" multiplier="0.95" id="mBF-h0-CKU"/>
+                                        <constraint firstItem="0Ec-1C-gqU" firstAttribute="width" secondItem="oUq-6x-yAv" secondAttribute="width" multiplier="0.95" id="zTE-d8-XFu"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="q2e-1U-0gp" firstAttribute="width" secondItem="2cR-cb-pPJ" secondAttribute="width" multiplier="0.9" id="9k2-ZT-Fue"/>
+                                <constraint firstItem="oUq-6x-yAv" firstAttribute="width" secondItem="2cR-cb-pPJ" secondAttribute="width" multiplier="0.9" id="Im4-d6-NFR"/>
+                                <constraint firstItem="HIf-20-16Y" firstAttribute="width" secondItem="2cR-cb-pPJ" secondAttribute="width" multiplier="0.9" id="exJ-VK-A1U"/>
+                                <constraint firstItem="rff-Ix-wmQ" firstAttribute="width" secondItem="2cR-cb-pPJ" secondAttribute="width" multiplier="0.9" id="jXO-Te-Dxr"/>
+                                <constraint firstItem="qfj-Km-mkc" firstAttribute="width" secondItem="2cR-cb-pPJ" secondAttribute="width" multiplier="0.9" id="smQ-53-IIc"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2cR-cb-pPJ" firstAttribute="width" secondItem="QxS-hz-y91" secondAttribute="width" id="D50-4Z-8A6"/>
+                        <constraint firstItem="2cR-cb-pPJ" firstAttribute="leading" secondItem="QxS-hz-y91" secondAttribute="leading" id="Da4-tm-as4"/>
+                        <constraint firstAttribute="trailing" secondItem="2cR-cb-pPJ" secondAttribute="trailing" id="Wcs-Do-ms8"/>
+                        <constraint firstItem="2cR-cb-pPJ" firstAttribute="top" secondItem="QxS-hz-y91" secondAttribute="top" id="tHV-fR-xlY"/>
+                        <constraint firstAttribute="bottom" secondItem="2cR-cb-pPJ" secondAttribute="bottom" id="ytu-vv-SX9"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="QxS-hz-y91" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3X1-hS-Obz"/>
+                <constraint firstItem="QxS-hz-y91" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GZo-QM-Ucs"/>
+                <constraint firstItem="QxS-hz-y91" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Y0T-Zp-6mc"/>
+                <constraint firstAttribute="trailing" secondItem="QxS-hz-y91" secondAttribute="trailing" id="grJ-fY-wow"/>
+                <constraint firstAttribute="bottom" secondItem="QxS-hz-y91" secondAttribute="bottom" constant="200" id="wxM-cB-YzP"/>
+            </constraints>
+            <point key="canvasLocation" x="-94" y="84"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

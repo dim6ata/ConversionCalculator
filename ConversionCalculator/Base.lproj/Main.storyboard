@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aUb-Sl-Shc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="History" id="BYZ-38-t0r" customClass="HistoryViewController" customModule="ConversionCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zWq-eR-Gye"/>
+                        <viewControllerLayoutGuide type="bottom" id="QzV-t0-T8H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qD5-Qq-L3R" customClass="ButtonsSegmentedControl" customModule="ConversionCalculator" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="45" width="373" height="72.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <segments>
+                                    <segment title="">
+                                        <imageReference key="image" image="scalemass" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="thermometer" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="cube" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="ruler" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="speedometer" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemIndigoColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="height">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="NavigationButtonsValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z0p-iu-7Tr"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="11g-Kh-ktI">
+                                <rect key="frame" x="0.0" y="116.5" width="414" height="656.5"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="11g-Kh-ktI" firstAttribute="top" secondItem="qD5-Qq-L3R" secondAttribute="bottom" id="0W0-02-Z4e"/>
+                            <constraint firstItem="11g-Kh-ktI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ACd-gH-1Jv"/>
+                            <constraint firstItem="qD5-Qq-L3R" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="Fvo-ET-6S6"/>
+                            <constraint firstItem="QzV-t0-T8H" firstAttribute="top" secondItem="11g-Kh-ktI" secondAttribute="bottom" constant="40" id="Slz-VP-Zy1"/>
+                            <constraint firstItem="qD5-Qq-L3R" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="d5k-2z-wyD"/>
+                            <constraint firstItem="qD5-Qq-L3R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geH-NA-2fv"/>
+                            <constraint firstAttribute="trailing" secondItem="11g-Kh-ktI" secondAttribute="trailing" id="mNr-0t-e7Y"/>
+                            <constraint firstItem="qD5-Qq-L3R" firstAttribute="top" secondItem="zWq-eR-Gye" secondAttribute="bottom" constant="1" id="uxp-xX-5NG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="History" image="clock.arrow.circlepath" catalog="system" id="WfS-rd-hox" userLabel="Item 3"/>
+                    <connections>
+                        <outlet property="conversionButtons" destination="qD5-Qq-L3R" id="gaw-Ar-duQ"/>
+                        <outlet property="stackContainer" destination="11g-Kh-ktI" id="FxT-VL-haC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="353.57142857142856"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Wx4-Tb-OvC">
+            <objects>
+                <viewController title="Settings" id="3yZ-VB-0kU" customClass="SettingsViewController" customModule="ConversionCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bYY-Jo-j2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="a9B-yw-TV6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gr1-wi-MRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHe-ca-wXE">
+                                <rect key="frame" x="142" y="54" width="130" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjK-af-VCk" customClass="CustomUIView" customModule="ConversionCalculator" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="403" width="373" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Ksd-t1-eCQ">
+                                        <rect key="frame" x="19" y="13.5" width="335" height="63"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9N-gt-umn" userLabel="1" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.5" height="63"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonClickedAction:" destination="3yZ-VB-0kU" eventType="touchUpInside" id="CJT-xr-DbR"/>
+                                                    <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="FGW-oL-mYA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIJ-c0-ZvX" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="89.5" y="0.0" width="66.5" height="63"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonClickedAction:" destination="3yZ-VB-0kU" eventType="touchUpInside" id="yXe-xM-PxW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6g-jn-eqw" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="179" y="0.0" width="66.5" height="63"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonClickedAction:" destination="3yZ-VB-0kU" eventType="touchUpInside" id="es5-vg-LpE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywJ-Ff-gKI" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                <rect key="frame" x="268.5" y="0.0" width="66.5" height="63"/>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonClickedAction:" destination="3yZ-VB-0kU" eventType="touchUpInside" id="UZ0-SX-gfS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ksd-t1-eCQ" firstAttribute="height" secondItem="sjK-af-VCk" secondAttribute="height" multiplier="0.7" id="GIm-d5-OCH"/>
+                                    <constraint firstItem="Ksd-t1-eCQ" firstAttribute="centerY" secondItem="sjK-af-VCk" secondAttribute="centerY" id="cPT-jO-3zt"/>
+                                    <constraint firstItem="Ksd-t1-eCQ" firstAttribute="centerX" secondItem="sjK-af-VCk" secondAttribute="centerX" id="cnV-NP-bvv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Decimal Places:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjl-si-KEQ">
+                                <rect key="frame" x="20.5" y="366.5" width="373" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Absolute Zero Check:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKD-kh-J6c">
+                                <rect key="frame" x="20" y="513" width="290" height="26.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CMj-GW-bGv">
+                                <rect key="frame" x="342.5" y="513" width="53.5" height="31"/>
+                                <color key="onTintColor" systemColor="systemIndigoColor"/>
+                                <color key="thumbTintColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <action selector="isbelowZeroSwitch:" destination="3yZ-VB-0kU" eventType="valueChanged" id="4Gq-Q6-dnA"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CMj-GW-bGv" firstAttribute="top" secondItem="sjK-af-VCk" secondAttribute="bottom" constant="20" id="Dc7-9K-bE9"/>
+                            <constraint firstAttribute="trailing" secondItem="CMj-GW-bGv" secondAttribute="trailing" constant="20" id="E0c-gi-RtC"/>
+                            <constraint firstItem="WHe-ca-wXE" firstAttribute="centerX" secondItem="gr1-wi-MRQ" secondAttribute="centerX" id="HyW-nt-fl0"/>
+                            <constraint firstItem="sjK-af-VCk" firstAttribute="centerX" secondItem="gr1-wi-MRQ" secondAttribute="centerX" id="JDk-Yw-eWF"/>
+                            <constraint firstItem="sjK-af-VCk" firstAttribute="centerY" secondItem="gr1-wi-MRQ" secondAttribute="centerY" id="PwO-qa-9TK"/>
+                            <constraint firstItem="WHe-ca-wXE" firstAttribute="top" secondItem="bYY-Jo-j2I" secondAttribute="bottom" constant="10" id="UTN-13-lZa"/>
+                            <constraint firstItem="vKD-kh-J6c" firstAttribute="width" secondItem="gr1-wi-MRQ" secondAttribute="width" multiplier="0.7" id="VZW-UR-BTf"/>
+                            <constraint firstItem="sjK-af-VCk" firstAttribute="top" secondItem="qjl-si-KEQ" secondAttribute="bottom" constant="10" id="a3F-6Q-WtK"/>
+                            <constraint firstItem="CMj-GW-bGv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vKD-kh-J6c" secondAttribute="trailing" constant="8" symbolic="YES" id="cH8-9y-u25"/>
+                            <constraint firstItem="qjl-si-KEQ" firstAttribute="width" secondItem="gr1-wi-MRQ" secondAttribute="width" multiplier="0.9" id="eiW-oP-cFI"/>
+                            <constraint firstItem="sjK-af-VCk" firstAttribute="height" secondItem="gr1-wi-MRQ" secondAttribute="height" multiplier="0.1" id="hSE-Kc-J53"/>
+                            <constraint firstItem="sjK-af-VCk" firstAttribute="width" secondItem="gr1-wi-MRQ" secondAttribute="width" multiplier="0.9" id="ivI-Oy-pW1"/>
+                            <constraint firstItem="vKD-kh-J6c" firstAttribute="leading" secondItem="gr1-wi-MRQ" secondAttribute="leading" constant="20" id="jKd-bV-CZT"/>
+                            <constraint firstItem="Ksd-t1-eCQ" firstAttribute="width" secondItem="sjK-af-VCk" secondAttribute="width" multiplier="0.9" id="oK6-bX-eIc"/>
+                            <constraint firstItem="vKD-kh-J6c" firstAttribute="top" secondItem="sjK-af-VCk" secondAttribute="bottom" constant="20" id="rIi-gK-gMK"/>
+                            <constraint firstItem="CMj-GW-bGv" firstAttribute="width" secondItem="gr1-wi-MRQ" secondAttribute="width" multiplier="0.125" id="xTy-ew-NJ4"/>
+                            <constraint firstItem="qjl-si-KEQ" firstAttribute="centerX" secondItem="gr1-wi-MRQ" secondAttribute="centerX" id="yjh-wW-0Kx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="yfI-UC-Phy"/>
+                    <connections>
+                        <outlet property="switchButton" destination="CMj-GW-bGv" id="fee-nk-JQ3"/>
+                        <outletCollection property="decimalButtons" destination="s9N-gt-umn" collectionClass="NSMutableArray" id="TNk-4I-DNo"/>
+                        <outletCollection property="decimalButtons" destination="yIJ-c0-ZvX" collectionClass="NSMutableArray" id="O8g-Br-QKc"/>
+                        <outletCollection property="decimalButtons" destination="s6g-jn-eqw" collectionClass="NSMutableArray" id="hlA-gV-S3T"/>
+                        <outletCollection property="decimalButtons" destination="ywJ-Ff-gKI" collectionClass="NSMutableArray" id="QDo-eA-cXo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHb-Oy-cIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.840579710145" y="-11.383928571428571"/>
+        </scene>
+        <!--Conversion-->
+        <scene sceneID="6Oz-NF-M7r">
+            <objects>
+                <viewController title="Conversion" id="jMj-zB-IoK" customClass="ConversionsViewController" customModule="ConversionCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VIO-U3-kbu"/>
+                        <viewControllerLayoutGuide type="bottom" id="SrW-Bn-qzv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xBX-J1-6cz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6BW-C7-LmH" customClass="ButtonsSegmentedControl" customModule="ConversionCalculator" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="45" width="373" height="72.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <segments>
+                                    <segment title="">
+                                        <imageReference key="image" image="scalemass" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="thermometer" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="cube" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="ruler" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                    <segment title="">
+                                        <imageReference key="image" image="speedometer" catalog="system" symbolScale="large"/>
+                                    </segment>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemIndigoColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="height">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                        <color key="value" systemColor="systemGreenColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="navigationButtonsAction:" destination="jMj-zB-IoK" eventType="valueChanged" id="HHg-aH-eBj"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEn-P8-oYH" userLabel="PlaceholderView">
+                                <rect key="frame" x="0.0" y="121.5" width="414" height="358.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view clearsContextBeforeDrawing="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YYM-Ps-xos" userLabel="KeyboardView" customClass="CustomUIView" customModule="ConversionCalculator" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="490.5" width="373" height="322.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="02a-q8-G6F">
+                                        <rect key="frame" x="9.5" y="10" width="354" height="302.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Sh-GJ-9zE" userLabel="r1">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAs-X7-Aq3" userLabel="1" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="sUN-fl-o4v"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFb-Hl-wF4" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="121.5" y="0.0" width="111" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="8HW-aA-DNM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JW-gf-cBc" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="242.5" y="0.0" width="111.5" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="kXJ-uD-POf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NJ5-xh-GGP" userLabel="r2">
+                                                <rect key="frame" x="0.0" y="61.5" width="354" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km8-5f-218" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="4T4-XY-ygj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh8-UJ-4lM" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="121.5" y="0.0" width="111" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="r9q-2R-it7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ir1-J7-g70" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="242.5" y="0.0" width="111.5" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="5DP-6M-m2d"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r1e-hI-sX8" userLabel="r3">
+                                                <rect key="frame" x="0.0" y="123" width="354" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVe-MF-Ovk" userLabel="7" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="y3Q-5x-uP9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYp-76-Lwj" userLabel="8" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="121.5" y="0.0" width="111" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="j5b-zs-6Qc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-lm-bYk" userLabel="9" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="242.5" y="0.0" width="111.5" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="14I-k0-Jzn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="A80-dE-xp3" userLabel="r4">
+                                                <rect key="frame" x="0.0" y="184.5" width="354" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eY-0n-fOM" userLabel="." customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="hPA-1u-wz3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yeg-XL-zdz" userLabel="0" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="121.5" y="0.0" width="111" height="56.5"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="keyboardButtonClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="Zxz-EV-seG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9h1-q6-4QI">
+                                                        <rect key="frame" x="242.5" y="0.0" width="111.5" height="56.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRr-iq-6kk" userLabel="del" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="26"/>
+                                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="delete.left.fill" catalog="system">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="specialButtonsClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="Oeb-R1-0fR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJr-sE-5Aj" userLabel="neg" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="30" width="111.5" height="26.5"/>
+                                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <state key="normal" title="NEG">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                        <real key="value" value="8"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="specialButtonsClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="woi-Af-m3M"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="bottom" semanticContentAttribute="forceLeftToRight" distribution="fillProportionally" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNc-s4-DnK">
+                                                <rect key="frame" x="0.0" y="246" width="354" height="56.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4c-bd-kzV" userLabel="save" customClass="CustomUIButton" customModule="ConversionCalculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="56.5"/>
+                                                        <color key="backgroundColor" red="0.97597031410000001" green="1" blue="0.23125865030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                        <state key="normal" title="SAVE">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                                                <real key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="specialButtonsClicked:" destination="jMj-zB-IoK" eventType="touchUpInside" id="nAK-Jq-Rxs"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="02a-q8-G6F" firstAttribute="centerX" secondItem="YYM-Ps-xos" secondAttribute="centerX" id="5R7-wb-eul"/>
+                                    <constraint firstAttribute="bottom" secondItem="02a-q8-G6F" secondAttribute="bottom" constant="10" id="9ty-3E-nac"/>
+                                    <constraint firstItem="02a-q8-G6F" firstAttribute="width" secondItem="YYM-Ps-xos" secondAttribute="width" multiplier="0.95" id="hzY-Dt-VUU"/>
+                                    <constraint firstItem="02a-q8-G6F" firstAttribute="top" secondItem="YYM-Ps-xos" secondAttribute="top" constant="10" id="l22-b6-hQn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YYM-Ps-xos" firstAttribute="height" secondItem="xBX-J1-6cz" secondAttribute="height" multiplier="0.36" id="7lB-F3-Ir6"/>
+                            <constraint firstItem="YEn-P8-oYH" firstAttribute="leading" secondItem="xBX-J1-6cz" secondAttribute="leading" id="KWO-ev-LXX"/>
+                            <constraint firstItem="YEn-P8-oYH" firstAttribute="width" secondItem="xBX-J1-6cz" secondAttribute="width" id="LQn-b8-sps"/>
+                            <constraint firstItem="YYM-Ps-xos" firstAttribute="centerX" secondItem="xBX-J1-6cz" secondAttribute="centerX" id="O2B-B7-LvE"/>
+                            <constraint firstItem="6BW-C7-LmH" firstAttribute="width" secondItem="xBX-J1-6cz" secondAttribute="width" multiplier="0.9" id="PEk-w4-ACO"/>
+                            <constraint firstItem="YYM-Ps-xos" firstAttribute="width" secondItem="xBX-J1-6cz" secondAttribute="width" multiplier="0.9" id="ZCV-vS-0oV"/>
+                            <constraint firstItem="6BW-C7-LmH" firstAttribute="height" secondItem="xBX-J1-6cz" secondAttribute="height" multiplier="0.08" id="Ziq-Dj-2pV"/>
+                            <constraint firstItem="6BW-C7-LmH" firstAttribute="centerX" secondItem="YEn-P8-oYH" secondAttribute="centerX" id="cBx-Wu-S9C"/>
+                            <constraint firstItem="6BW-C7-LmH" firstAttribute="top" secondItem="VIO-U3-kbu" secondAttribute="bottom" constant="1" id="cWJ-g0-CJL"/>
+                            <constraint firstItem="YEn-P8-oYH" firstAttribute="height" secondItem="xBX-J1-6cz" secondAttribute="height" multiplier="0.4" id="mgJ-xf-Iwh"/>
+                            <constraint firstItem="YYM-Ps-xos" firstAttribute="bottom" secondItem="SrW-Bn-qzv" secondAttribute="top" id="okd-4a-qML"/>
+                            <constraint firstItem="YEn-P8-oYH" firstAttribute="top" secondItem="6BW-C7-LmH" secondAttribute="bottom" constant="5" id="toD-iE-coT"/>
+                            <constraint firstAttribute="trailing" secondItem="YEn-P8-oYH" secondAttribute="trailing" id="wKh-z7-7go"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Conversions" image="arrow.up.arrow.down" catalog="system" id="3AH-5Z-RXX" userLabel="Conversions"/>
+                    <connections>
+                        <outlet property="conversionButtons" destination="6BW-C7-LmH" id="dI1-fF-A89"/>
+                        <outlet property="viewPlaceholder" destination="YEn-P8-oYH" id="Oau-F0-rgu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DmN-2F-iAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <containerView opaque="NO" contentMode="scaleToFill" id="mMe-uh-N0L">
+                    <rect key="frame" x="0.0" y="0.0" width="396" height="640"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                </containerView>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="-338.16964285714283"/>
+        </scene>
+        <!--Tab Bar ControllerVC-->
+        <scene sceneID="b8P-zF-NZ3">
+            <objects>
+                <tabBarController id="aUb-Sl-Shc" customClass="TabBarControllerVC" customModule="ConversionCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uvs-Jo-smI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="conversionTabBar" destination="uvs-Jo-smI" id="8dK-QD-fBU"/>
+                        <outlet property="tabBar" destination="uvs-Jo-smI" id="KxR-je-epa"/>
+                        <segue destination="jMj-zB-IoK" kind="relationship" relationship="viewControllers" id="MZf-pU-5kc"/>
+                        <segue destination="3yZ-VB-0kU" kind="relationship" relationship="viewControllers" id="cHX-w3-XDU"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="JSu-Yy-SRr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oH2-He-F4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="-11"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0JW-gf-cBc">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="6BW-C7-LmH">
+            <size key="intrinsicContentSize" width="244" height="31"/>
+        </designable>
+        <designable name="8eY-0n-fOM">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="Ir1-J7-g70">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="Jh8-UJ-4lM">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="LYp-76-Lwj">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="MAs-X7-Aq3">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="XJr-sE-5Aj">
+            <size key="intrinsicContentSize" width="30" height="28"/>
+        </designable>
+        <designable name="Yeg-XL-zdz">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="d4c-bd-kzV">
+            <size key="intrinsicContentSize" width="67" height="46"/>
+        </designable>
+        <designable name="km8-5f-218">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="pRr-iq-6kk">
+            <size key="intrinsicContentSize" width="21.5" height="22"/>
+        </designable>
+        <designable name="qD5-Qq-L3R">
+            <size key="intrinsicContentSize" width="244" height="31"/>
+        </designable>
+        <designable name="qJq-lm-bYk">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="s6g-jn-eqw">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="s9N-gt-umn">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="xFb-Hl-wF4">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="xVe-MF-Ovk">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="yIJ-c0-ZvX">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="ywJ-Ff-gKI">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="128" height="98"/>
+        <image name="clock.arrow.circlepath" catalog="system" width="128" height="110"/>
+        <image name="cube" catalog="system" width="128" height="124"/>
+        <image name="delete.left.fill" catalog="system" width="128" height="104"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="ruler" catalog="system" width="128" height="57"/>
+        <image name="scalemass" catalog="system" width="128" height="119"/>
+        <image name="speedometer" catalog="system" width="128" height="121"/>
+        <image name="thermometer" catalog="system" width="93" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
